@@ -1,4 +1,4 @@
-# Procedure for tasks
+# Git workflow for tasks
 
 > [!NOTE]
 > This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
@@ -23,16 +23,16 @@
    **Using terminal:**
 
    ```console
-   git add <file>                                  # e.g., git add docs/architecture.md
+   git add <file>                                 # e.g., git add docs/architecture.md
    git commit -m "<type>: <short description>"    # e.g., git commit -m "docs: add architecture diagram"
    ```
 
-   **Using VS Code:**
+   **Using `VS Code`:**
 
-   1. Open `Source Control` (`Ctrl+Shift+G`)
-   2. Click `+` next to changed files to stage them
-   3. Type commit message, e.g., `docs: add architecture diagram`
-   4. Click `Commit`
+   1. Open `Source Control`.
+   2. Click `+` next to changed files to stage them.
+   3. Type commit message, e.g., `docs: add architecture diagram`.
+   4. Click `Commit`.
 
 4. Push the branch to your forked repo:
 
@@ -54,11 +54,11 @@
 
 As a PR reviewer:
 
-1. Check the task's **Reviewer checklist**
-2. Leave at least one [comment](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) — point out issues or confirm that items look good
-3. Approve the PR if all checklist items are met
+1. Check the task's **Acceptance criteria**.
+2. Leave at least one [comment](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request) — point out problems or confirm that items look good.
+3. Approve the PR when all relevant acceptance criteria are met.
 
 As a PR author:
 
-- Address reviewer comments (fix issues or explain your reasoning)
-- Reply to comments, e.g., "Fixed in d0d5aeb"
+- Address reviewer comments (fix issues or explain your reasoning).
+- Reply to comments, e.g., "Fixed in d0d5aeb".
