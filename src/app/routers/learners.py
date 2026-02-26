@@ -29,16 +29,10 @@ async def get_learners(
 # PART B: POST endpoint
 # ===
 
-# UNCOMMENT AND FILL IN
-#
-# @router.<method>("/<resource_name>", response_model=<resource_schema>, status_code=<status_code>)
-# async def <function_name>(
-#     <param_name>: <request_schema>,
-#     session: AsyncSession = Depends(get_session),
-# ):
-#     """<docstring>"""
-#     return await <db_create_function>(session, name=<param_name>.name, email=<param_name>.email)
-#
-# Reference:
-# items POST -> creates a row in items table, accepts ItemCreate, returns Item with status 201
-# learners POST -> creates a row in learners table, accepts LearnerCreate, returns Learner with status 201
+@router.post("/learners", response_model=Learner, status_code=201)
+async def create_learner(
+    learner_data: LearnerCreate,
+    session: AsyncSession = Depends(get_session),
+):
+    """Create a new learner"""
+    return await create_learner_in_db(session, name=learner_data.name, email=learner_data.email)
